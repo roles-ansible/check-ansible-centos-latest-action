@@ -41,6 +41,7 @@ jobs:
         #   the group you that we write in our hosts file.
         #   example:
         #   group: 'servers'
+        #
         # hosts: ""
         #  [optional]
         #   When testing playbooks you have to give one example
@@ -50,7 +51,8 @@ jobs:
         #   some examples:
         #   hosts: 'localhost'
         #   hosts: 'srv01.example.com'
-        # requirements
+        #
+        # requirements: ""
         #  [optional]
         #   When testing playbooks and you are using ansible galaxy,
         #   you may be interested in installing your requirements
