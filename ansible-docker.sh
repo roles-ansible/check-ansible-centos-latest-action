@@ -71,7 +71,7 @@ else
   [ ! -z "${REQUIREMENTS}" ] && ansible-galaxy install ${REQUIREMENTS}
 fi
 if [ "$0" = "$BASH_SOURCE" ] ; then
-  >&2 echo -E "\nRunning Ansible debian check...\n"
+  >&2 echo -E "\nRunning Ansible centos check...\n"
   ansible::prepare
   if [[ "${TARGETS}" == *.yml ]]
   then
