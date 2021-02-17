@@ -9,12 +9,11 @@ LABEL "com.github.actions.description"="Check ansible role or playbook with Cent
 LABEL "com.github.actions.icon"="aperture"
 LABEL "com.github.actions.color"="green"
 
-RUN dnf update --assumeyes && dnf install --assumeyes \
-    python3 \
-    python3-pip \
-    git
+RUN dnf update --assumeyes && dnf install --assumeyes epel-release
 
-RUN pip3 install setuptools && pip3 install ansible
+RUN dnf update --assumeyes && dnf install --assumeyes \
+    ansible \
+    git
 
 RUN ansible --version
 
