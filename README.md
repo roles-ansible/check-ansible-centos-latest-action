@@ -28,7 +28,7 @@ jobs:
 
       - name: ansible check with quay.io/centos/centos:latest
         # optionally replace "master" with any valid git ref
-        uses: roles-ansible/check-ansible-centos-centos8-action@master
+        uses: roles-ansible/check-ansible-centos-centos-latest-action@master
         with:
           targets: "./"
           #  [required]
