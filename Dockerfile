@@ -11,9 +11,7 @@ LABEL "com.github.actions.icon"="aperture"
 LABEL "com.github.actions.color"="green"
 
 # hadolint ignore=DL3041
-RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* \
-  && sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* \
-  && dnf update --assumeyes \
+RUN dnf update --assumeyes \
   && dnf install -y epel-release \
   && dnf install --assumeyes \
     ansible git \

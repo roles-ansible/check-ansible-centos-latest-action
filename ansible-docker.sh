@@ -66,7 +66,7 @@ EOF
 
   # execute playbook
   # shellcheck disable=SC2086
-  ansible-playbook --connection=local --inventory host.ini ${TARGETS}
+  ansible-playbook --connection=local --inventory hosts.ini ${TARGETS}
 }
 
 # make sure git is up to date
