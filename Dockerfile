@@ -17,6 +17,7 @@ RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-* \
   && dnf install -y epel-release \
   && dnf install --assumeyes \
          python3 python3-pip git \
+  && pip3 install --no-cache-dir setuptools \
   && pip3 install --no-cache-dir ansible \
   && dnf clean all \
   && ansible --version
