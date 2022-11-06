@@ -16,7 +16,7 @@ RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-* \
   && dnf update --assumeyes \
   && dnf install -y epel-release \
   && dnf install --assumeyes \
-         ansible git \
+         ansible-core git \
   && dnf clean all \
   && ansible --version
 
