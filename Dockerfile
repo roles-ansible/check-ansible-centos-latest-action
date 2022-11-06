@@ -12,11 +12,11 @@ LABEL "com.github.actions.color"="green"
 
 # hadolint ignore=DL3041
 RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-* \
-  && sed -i -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g" /etc/yum.repos.d/CentOS-* \
+  && sed -i -e "s|#baseurl=http://mirror.centos.org|baseurl=http://mirror.stream.centos.org/|g" /etc/yum.repos.d/CentOS-* \
   && dnf update --assumeyes \
   && dnf install -y epel-release \
   && dnf install --assumeyes \
-         ansible-core git \
+         ansible git \
   && dnf clean all \
   && ansible --version
 
